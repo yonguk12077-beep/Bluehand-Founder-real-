@@ -6,6 +6,7 @@ import folium
 from folium.plugins import LocateControl
 from streamlit_folium import st_folium
 
+
 st.title("현재 사용자 위치")
 
 
