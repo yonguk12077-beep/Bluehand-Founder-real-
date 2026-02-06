@@ -25,6 +25,35 @@ st.set_page_config(
     initial_sidebar_state="expanded",  # 사이드바를 기본적으로 펼침
 )
 
+# Streamlit 페이지 하단 라디오 블록 정렬용
+st.markdown("""
+<style>
+/* 라디오 블록 자체를 페이지 폭 기준으로 가운데 정렬 */
+.pagination-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* body 기준 가로 중앙 */
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Streamlit radio 컨테이너가 기본적으로 좌측 정렬되는 걸 강제 중앙정렬 */
+.pagination-wrap [role="radiogroup"]{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+}
+
+/* 라디오 각 아이템 간 간격(선택) */
+.pagination-wrap label{
+  margin-right: 10px !important;
+}
+.pagination-wrap label:last-child{
+  margin-right: 0 !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # 필터 옵션 정의: DB 컬럼명(key)과 화면에 보여줄 텍스트(value) 매핑
 FILTER_OPTIONS = {
     "is_ev": "⚡ 전기차 전담",
@@ -152,6 +181,7 @@ def render_paginated_table(rows_all: list[dict]):
     # 페이지 번호 선택 버튼 생성 (라디오 버튼 활용)
     options = list(range(1, total_pages + 1))
     index = options.index(page_now)  # 현재 페이지의 인덱스 찾기
+
 
     # UI 레이아웃: 중앙 정렬을 위해 컬럼 분할
     left, center, right = st.columns([1, 2, 1])
