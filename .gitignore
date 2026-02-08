@@ -127,3 +127,7 @@ fabric.properties
 .idea/
 *.csv
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,database,dotenv
+Hyndai.jpg
+
+
+.vscode/

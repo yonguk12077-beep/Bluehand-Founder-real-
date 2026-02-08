@@ -8,7 +8,7 @@
 #  - DB_HOST (default: localhost)
 #  - DB_PORT (default: 3306)
 #  - DB_USER (default: root)
-#  - DB_PASSWORD (default: "")
+#  - DB_PASSWORD (default: )
 #  - DB_NAME (default: bluehands_db)
 
 from typing import Any, Dict, List, Tuple

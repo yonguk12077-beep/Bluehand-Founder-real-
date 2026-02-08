@@ -1,0 +1,39 @@
+/* FAQ section styles (match reference layout) */
+.faq-section {
+  margin-top: 16px;
+  color: #111827;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.faq-title {
+  font-size: 20pt;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.faq-list,
+.faq-sublist {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 16px 0;
+}
+
+.faq-list > li {
+  margin: 8px 0;
+}
+
+.faq-sublist {
+  margin-top: 6px;
+  margin-left: 18px;
+}
+
+.faq-sublist > li {
+  margin: 6px 0;
+}
+
+.faq-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 18px 0;
+}
